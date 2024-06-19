@@ -9,9 +9,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -23,6 +26,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.Y__Hg89rd__qzIej9XXZROHLAy4XFKfOclCcSaHgex }}
           role-to-assume: ${{ secrets.ROLE_TO_ASSUME }}
           aws-region: us-east-1
+        env: 
+          NODE_OPTIONS: '--unhandled-rejection==strict'
 
       - name: Bootstrap CDK
         run: npx cdk bootstrap aws://962886823756/us-east-1|
