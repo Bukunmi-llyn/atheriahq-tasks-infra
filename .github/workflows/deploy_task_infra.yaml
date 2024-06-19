@@ -20,7 +20,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AKIA6AMEG55GKUJNTB3D }}
-          aws-secret-access-key: ${{ secrets.Y/Hg89rd/qzIej9XXZROHLAy4XFKfOclCcSaHgex }}
+          aws-secret-access-key: ${{ secrets.Y__Hg89rd__qzIej9XXZROHLAy4XFKfOclCcSaHgex }}
           role-to-assume: ${{ secrets.ROLE_TO_ASSUME }}
           aws-region: us-east-1
 
